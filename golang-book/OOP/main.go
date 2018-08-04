@@ -10,6 +10,13 @@ func main() {
 	dog := Dog{Animal{"Dog", 9}, "BARK !!"}
 	cat.MakeNoise(cat.voice)
 	dog.MakeNoise(dog.voice)
+	vehicle := new(Vehicle)
+	vehicle.List[0] = Car{"BEEP"}
+	vehicle.List[1] = Bike{"RING"}
+	for i := range vehicle.List {
+		PressHorn(vehicle.List[i])
+	}
+
 }
 
 type Animal struct {
